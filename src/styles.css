@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+body h1 {
+    color: brown;
+}
+
+body p {
+    color: aqua;
+}
+
+body .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

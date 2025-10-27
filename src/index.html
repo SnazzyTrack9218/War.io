@@ -1,56 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="SnazzyTrack">
+    <meta name="description" content="This is a WarGame.io website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>WarGame.io</title>
 </head>
-<body style="background-color: black;" text ="white">
-    <h1>WarGame!</h1>
+<body style="background-color:#000;color:#fff;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;">
+    <header>
+        <h1>WarGame!</h1>
+    </header>
 
-    <!-- Start -->
-    <h4 style="color: red;"> Enjoy the game! </h4>
-    <ul>
-        <li> OK OK </li>
-        <li> Fuck </li>
-        <li> Kill Shrek </li>
-    </ul>
+    <main>
+        <!-- Button and demo script -->
+        <button id="demoButton" style="background-color:blue;border-radius:5px;color:limegreen;padding:0.5rem 1rem;">
+            Click me
+        </button>
+        <p id="message">Hello</p>
 
-    
+        <!-- Short list (cleaned) -->
+        <h4 style="color:red">Enjoy the game!</h4>
+        <ul>
+            <li>OK OK</li>
+            <li>Fuck</li>
+            <li>Dick shrek</li>
+        </ul>
 
-    <h3> <span style="color: blue;">Store Hours<span> </h3>
+        <!-- Form (fixed tags and structure) -->
+        <form action="action_page.php" method="post" style="max-width:480px">
+            <div>
+                <label for="fname">First name</label><br>
+                <input type="text" id="fname" name="fname" placeholder="SpongeBob" required>
+            </div>
 
+            <div>
+                <label for="lname">Last name</label><br>
+                <input type="text" id="lname" name="lname" placeholder="SquarePants">
+            </div>
 
-    <table bgcolor="Black" border="1" cellpadding="5" cellspacing="3">
-        <tr bgcolor="lightgrey">   
-            <th> Day </th>
-            <th> Opening Time </th>
-            <th> Closing Time </th>
-        </tr>
-        <tr bgcolor="lightblue">
-            <td> Monday </td>
-            <td> 9:00 AM </td>
-            <td> 5:00 PM </td>
-        </tr>
+            <div>
+                <label for="pass">Password</label><br>
+                <input type="password" id="pass" name="pass" maxlength="12" placeholder="••••••" required>
+            </div>
 
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" maxlength="254" placeholder="name@example.com" required>
+            </div>
 
+            <div>
+                <label for="payment">Payment method</label><br>
+                <select id="payment" name="payment">
+                    <option value="creditcard">Credit Card</option>
+                    <option value="debitcard">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
 
-    </table>
+            <div>
+                <label>
+                    <input type="checkbox" id="sub" name="sub"> I agree to the terms and conditions
+                </label>
+            </div>
 
-    <!-- Image -->
-    <h1> Here is some Shrek!</h1>
-    <a href="https://google.com">
-        <img src="imgAssets/shrek.jpg" loading="lazy" alt="Shrek Image" title="Shrek">
-    </a>
-    
-    <!-- Audio -->
-    <br>
-    <br>
-    <audio controls autoplay muted loop>
-        <source src="Audio/cascade-breathe-future-garage-412839.mp3">
-        <source src="Audio/cascade-breathe-future-garage-412839.wave">
-        This browser does not support the audio element.
-    </audio>
+            <div style="margin-top:.5rem">
+                <input type="reset"> <input type="submit">
+            </div>
 
+            <div>
+                <p> So today i will be going crazy gbe of all this code hard to remeber all this shit like damn</p>
+            </div>
+        </form>
+
+        <h3><span style="color:blue">Shrek's Hours</span></h3>
+
+        <!-- Table -->
+        <table style="background:#000;border:1px solid #ddd;padding:5px;border-collapse:collapse;color:#000">
+            <thead style="background:lightgrey;color:#000">
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+                <tr style="background:lightblue">
+                    <td>Monday</td>
+                    <td>9:00 AM</td>
+                    <td>5:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Image -->
+        <h2>Here is some Shrek!</h2>
+            <img src="imgAssets/shrek.jpg" alt="Shrek" title="Shrek" loading="lazy" style="max-width:100%;height:auto">
+        <!-- Audio -->
+        <audio controls loop>
+            <source src="Audio/cascade-breathe-future-garage-412839.mp3" type="audio/mpeg">
+            <source src="Audio/cascade-breathe-future-garage-412839.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </main>
+
+    <script>
+        // small demo interaction
+        document.getElementById('demoButton').addEventListener('click', function () {
+            document.getElementById('message').textContent = 'You clicked the button!';
+        });
+    </script>
 </body>
 </html>
